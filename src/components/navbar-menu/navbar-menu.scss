@@ -1,0 +1,33 @@
+navbar-menu {
+  .list-menus > a{
+    cursor: pointer;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: rgb(58, 150, 79);
+    margin: 0 20px!important;
+}
+.bg-light {
+  background-color: #adc7e2b0!important;
+}
+
+.center{
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+img.logo{
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 120px;
+  margin-top: 10px;
+}
+
+.title{
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+}

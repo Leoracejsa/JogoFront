@@ -1,0 +1,35 @@
+<img class="logo" src="assets/imgs/logo.png" alt="Imagem Game Percurso">
+<h1 class="title">Game Routes</h1>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul  class="navbar-nav mr-auto center">
+
+      <li  class="nav-item list-menus">
+        <a (click)="openPage('FormTemaPage',$event)" class="nav-link" >Create Theme</a>
+      </li>
+
+      <li class="nav-item list-menus">
+        <a (click)="openPage('FormQuestoesJogoPage',$event)" class="nav-link" >Set Issues for a Theme</a>
+      </li>
+
+      <li class="nav-item list-menus">
+        <a (click)="openPage('FormConfiguracaoJogoPage',$event)" class="nav-link" >Defining Game Settings</a>
+      </li>
+
+      <li class="nav-item list-menus">
+        <a (click)="openPage('TelaJogoPage',$event)" class="nav-link" >Creating the Game</a>
+      </li>
+
+
+    </ul>
+
+    
+  </div>
+  
+</nav>

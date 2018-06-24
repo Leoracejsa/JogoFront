@@ -1,0 +1,30 @@
+<ion-content padding>
+    <navbar-menu></navbar-menu>
+        <form [formGroup]="formGroup" (ngSubmit)="enviarConfiguracao(); $event.preventDefault()">
+      <ion-item>
+        <ion-label floating>Board Color</ion-label>
+        <ion-select formControlName="colorsTab">
+          <ion-option *ngFor="let cor of cores" [value]="cor.id">{{cor?.cor}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngFor="let number of quantidadePerguntaAvatar; let i = index;">
+              <ion-label  floating>Profile Color {{i + 1}}</ion-label>
+              <ion-select    (ionChange)="inserirCor($event)"  >
+                <ion-option    *ngFor="let cor of cores" [value]="cor.id">{{cor?.cor}}</ion-option>
+              </ion-select>
+
+        </ion-item>
+
+        <button ion-button block class="color-confirm" type="button" (click)="adicionarCorAvatar()">Changing the Color </button>
+
+
+        <ion-item *ngFor="let number of quantidadeMensagem; let i = index;">
+            <ion-label floating>Message From The Last House {{i + 1}} </ion-label>
+            <ion-input (blur)="inserirMensagem($event.target.value)" value="Message Default"  type="text"></ion-input>
+          </ion-item>
+          <button ion-button block  class="color-add" type="button"  (click)="adicionarMensagem()">Adding a New Message</button>
+      <button ion-button block color="primary" type="submit" >Confirming Settings</button>
+    </form>
+
+  </ion-content>

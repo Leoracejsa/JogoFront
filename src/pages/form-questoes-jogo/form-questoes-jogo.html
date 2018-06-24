@@ -1,0 +1,45 @@
+
+<ion-content padding>
+    <navbar-menu></navbar-menu>
+  <form [formGroup]="formGroup" (ngSubmit)="enviarQuestao(); $event.preventDefault()">
+    <ion-item>
+      <ion-label floating>Difficulty level</ion-label>
+      <ion-select formControlName="difficulty">
+        <ion-option *ngFor="let dificuldade of dificuldades; let i = index;" [value]="i">{{dificuldade}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Theme of the Question</ion-label>
+      <ion-select formControlName="theme">
+        <ion-option *ngFor="let tema of temas" [value]="tema.id">{{tema.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Statement</ion-label>
+      <ion-input formControlName="statement" type="text"></ion-input>
+    </ion-item>
+
+    <div *ngFor="let quantidade of quantidadeResposta">
+      <ion-item>
+        <ion-label floating>Answer</ion-label>
+        <ion-input  formControlName="resposta" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>Answer Correct</ion-label>
+          <ion-select formControlName="respostaCerta">
+            <ion-option  value=true>Yes</ion-option>
+            <ion-option  value=false>No</ion-option>
+          </ion-select>
+        </ion-item>
+        <button ion-button block class="color-confirm" type="button" (click)="confirmarResposta()">Confirm Answer</button>
+      </div>
+      <button ion-button block class="color-add" type="button" (click)="adicionarResposta()">Add Reply</button>
+
+    <button ion-button block color="primary" type="submit">Confirm Settings</button>
+  </form>
+
+
+</ion-content>

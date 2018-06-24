@@ -1,0 +1,15 @@
+<navbar-menu></navbar-menu>
+
+<form [formGroup]="formGroup" (ngSubmit)="definifirTema(); $event.preventDefault()">
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="font">Game Theme</label>
+      <input
+      type="text"
+      class="form-control"
+      formControlName="name"
+      id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Theme for the Game">
+
+    </div>
+
+    <button type="submit" class="btn-lg btn-primary">Submit</button>
+  </form>
